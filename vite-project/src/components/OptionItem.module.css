@@ -1,0 +1,27 @@
+.button {
+   display: block;
+   width: 100%;
+   margin-bottom: 10px;
+   padding: 0.5em;
+   box-shadow: 0 0 1px black;
+   border-radius: 50px;
+   background-color: #e2e8f0;
+   transition: background-color 0.3s ease-in-out;
+   color: #1e293b;
+}
+.button:hover {
+   background-color: #4ade80;
+}
+
+.answer {
+   
+}
+
+.correct {
+   text-transform: uppercase;
+   font-weight: bold;
+}
+
+.wrong {
+   background-color: #ef4444;
+}
