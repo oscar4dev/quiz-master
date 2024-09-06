@@ -76,7 +76,7 @@ function Header() {
          </nav>
 
          {
-            isOpen && <nav className='absolute p-4 top-0 right-0 left-0 h-80 rounded-3xl bg-slate-100 text-lg shadow-lg dark:bg-slate-500'>
+            isOpen && <nav className='absolute z-20 p-4 top-0 right-0 left-0 h-80 rounded-3xl bg-slate-100 text-lg shadow-lg dark:bg-slate-500'>
                   <ul className='flex justify-between'>
                      <li className='text-3xl'>
                         <Link 
