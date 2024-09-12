@@ -100,7 +100,7 @@ function About() {
                impact we&apos;ve made.
             </p>
 
-            <div className='h-96'>
+            <div className='h-[500px]'>
                <img
                   src={ Image2 }
                   alt="White question mark on blue background"

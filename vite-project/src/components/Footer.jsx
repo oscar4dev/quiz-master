@@ -40,7 +40,7 @@ function Footer() {
             <p className='text-center text-base'>
                &copy; { date } QuizMaster &#183; Built by
                <a 
-                  href="https://github.com/oscar4dev"
+                  href="https://portfolio.strawberryeat.com/"
                   rel='noreferrer'
                   target='_blank'
                ><span className='ml-1 text-blue-600 underline hover:text-slate-800 dark:text-blue-300 dark:hover:text-slate-200'>Oscar4dev</span></a>

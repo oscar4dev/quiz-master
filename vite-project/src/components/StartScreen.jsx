@@ -2,9 +2,10 @@ import React from 'react'
 import { useQuiz } from '../contexts/QuizContext'
 import { Link } from 'react-router-dom'
 import { IoPersonOutline } from "react-icons/io5";
-import Photo from '/photo-one.jpg'
-import PhotoTwo from '/photo-two.jpg'
-import PhotoThree from '/photo-three.jpg'
+import QuizPhoto1 from '/quiz-photo1.png'
+import QuizPhoto4 from '/quiz-photo4.png'
+import QuizPhoto3 from '/quiz-photo3.png'
+import QuizPhoto from '/quiz-photo222.png'
 import Footer from './Footer';
 
 function StartScreen() {
@@ -12,43 +13,39 @@ function StartScreen() {
    const { dispatch } = useQuiz()
    
    return (
-      <div className='px-4'>
-         <section className='gap-4 my-8 h-[400px] flex flex-col justify-evenly'>
-            <h1 className='text-center text-4xl tracking-wider font-bold mb-8 md:text-3xl'>
-               Welcome to <br /> QuizMaster!
-            </h1>
-            <p className='text-center text-xl mx-auto mb-8 max-w-[550px]'>
-               Dive into a world of fun and educational quizzes.
-               Challenge yourself and learn something new everyday!
-            </p>
-
-            <div className='flex flex-col space-y-4 sm:flex-row sm:items-center sm:space-y-0 sm:w-3/6 sm:mx-auto sm:gap-8'>
-               <button
-                  onClick={ () => dispatch({ type: 'start' }) }
-                  className='bg-blue-500 text-slate-200 rounded-full text-sm h-12 w-4/6 mx-auto tracking-wide hover:tracking-wider hover:bg-blue-800 transition-all ease-in-out'
-               >
-                  Start Quiz
-               </button>
-               <Link
-                  to='/about'
-                  className='bg-slate-200 text-sm w-4/6 h-12 mx-auto rounded-full flex items-center justify-center capitalize font-bold tracking-wide hover:tracking-wider hover:bg-slate-400 transition-all ease-in-out dark:text-slate-800'
-               >
-                  learn more &rarr;
-               </Link>
+      <main className=''>
+         <section className='relative'>
+            <img 
+               src={ QuizPhoto } 
+               alt="A quiz enthusiast taking a quiz" 
+               className='h-[500px] w-full object-cover'
+            />
+            <div className='absolute top-0 p-4 text-slate-50 flex flex-col justify-evenly h-full'>
+               <h1 className='text-5xl font-bold tracking-wider mb-8'>Welcome to <br /> QuizMaster!</h1>
+               <p className='mb-8 text-lg'>
+                  Dive into a world of fun and educational quizzes.
+                  Challenge yourself and learn something new everyday!
+               </p>
+               <div className='sm:flex'>
+                  <button
+                     onClick={ () => dispatch({ type: 'start' }) }
+                     className='bg-blue-500 text-slate-200 rounded-full text-sm h-12 w-4/6 mx-auto block mb-4 tracking-wide hover:tracking-wider hover:bg-blue-800 transition-all ease-in-out sm:w-2/6 sm:ml-0'
+                  >
+                     Start Quiz
+                  </button>
+                  <Link
+                     to='/about'
+                     className='bg-slate-200 text-slate-800 text-sm w-4/6 h-12 mx-auto rounded-full flex items-center justify-center capitalize font-bold tracking-wide hover:tracking-wider hover:bg-slate-400 transition-all ease-in-out dark:text-slate-800 sm:w-2/6 sm:ml-0'
+                  >
+                     learn more &rarr;
+                  </Link>
+               </div>
             </div>
          </section>
 
-         <section className='my-10 h-60 w-full md:h-[450px] md:w-5/6 md:mx-auto'>
-            <img 
-               src={ Photo } 
-               alt="human head shape with lots of question mark on sticker" 
-               className='h-full w-full object-cover rounded-2xl'
-            />
-         </section>
-
-         <section className='my-10 md:p-8'>
+         <section className='mt-8 px-2 sm:px-4'>
             <p className='text-blue-500 text-lg font-bold mb-4'>Engage and Learn</p>
-            <h2 className='capitalize text-2xl font-bold mb-4'>discover unique features</h2>
+            <h2 className='capitalize text-3xl font-bold tracking-wider mb-4'>discover unique features</h2>
             <p className='mb-4 text-lg max-w-3xl'>
                QuizMaster offers a wide variety of topics
                and interactive questions to keep you entertained
@@ -75,23 +72,23 @@ function StartScreen() {
             <p className='font-bold mb-2 text-lg'>
                <span className='mr-2'>💯</span>Track Your Progress
             </p>
-            <p className='ml-8 mb-4 text-lg'>
+            <p className='ml-8 text-lg'>
                Keep an eye on your scores and see how you
                improve over time.
             </p>
          </section>
 
-         <section className='border-3 h-60 w-full my-10 md:h-[450px] md:w-5/6 md:mx-auto'>
+         <section className='mt-8'>
             <img 
-               src={ PhotoTwo } 
-               alt="colored question mark background" 
-               className='h-full w-full object-cover rounded-2xl'
+               src={ QuizPhoto1 } 
+               alt="A quiz enthusiast taking a quiz" 
+               className='h-[500px] w-full object-cover'
             />
          </section>
 
-         <section className='my-10 md:my-16 md:p-8'>
-            <h2 className='capitalize text-center text-2xl font-bold'>what our users say</h2>
-            <span className='text-center block text-slate-500 mb-4 dark:text-slate-400'>3 reviews</span>
+         <section className='mt-8 px-2 sm:mt-10 sm:px-4'>
+            <h2 className='capitalize text-3xl font-bold tracking-wider'>what our users say</h2>
+            <span className='block text-slate-500 mb-4 dark:text-slate-400'>3 reviews</span>
 
             <div className='bg-slate-100 text-lg shadow-lg border rounded-2xl px-2 py-4 mb-8 md:px-4 md:py-8 dark:bg-slate-700 dark:border-none'>
                <p className='flex items-center gap-2 font-bold mb-2'>
@@ -124,7 +121,7 @@ function StartScreen() {
                </p>
             </div>
 
-            <div className='bg-slate-100 text-lg shadow-lg border rounded-2xl px-2 py-4 md:px-4 md:py-8 dark:bg-slate-700 dark:border-none'>
+            <div className='bg-slate-100 text-lg shadow-lg border rounded-2xl px-2 py-4 sm:px-4 md:py-8 dark:bg-slate-700 dark:border-none'>
                <p className='flex items-center gap-2 font-bold mb-2'>
                   <span className='text-sm'>⭐⭐⭐⭐⭐</span> User Friendly
                </p>
@@ -140,8 +137,16 @@ function StartScreen() {
             </div>
          </section>
 
-         <section className='my-10 md:px-8 md:pb-8'>
-            <h2 className='text-2xl font-bold mb-4'>Join QuizMaster Today!</h2>
+         <section className='pt-8'>
+            <img 
+               src={ QuizPhoto4 }
+               alt="A quiz enthusiast taking a quiz" 
+               className='h-[500px] w-full object-cover'
+            />
+         </section>
+
+         <section className='mt-10 px-2 sm:px-4 sm:pb-8'>
+            <h2 className='text-3xl font-bold tracking-wider mb-4'>Join QuizMaster Today!</h2>
             <p className='mb-4 text-lg'>
                Sign up now and start exploring our vast
                colection of quizzes. Challenge yourself
@@ -170,22 +175,22 @@ function StartScreen() {
             </div>
             <button
                onClick={ () => dispatch({ type: 'start' }) }
-               className='my-8 mx-auto block bg-blue-500 w-4/6 h-12 text-sm rounded-full text-slate-50 md:w-2/6 md:mt-12 hover:bg-blue-700 hover:tracking-wider transition-all ease-in-out'
+               className='mt-8 mx-auto block bg-blue-500 w-4/6 h-12 text-sm rounded-full text-slate-50 md:w-2/6 md:mt-12 hover:bg-blue-700 hover:tracking-wider transition-all ease-in-out'
             >
                Start Quiz &rarr;
             </button>
          </section>
 
-         <section className='h-60 w-full my-10 md:h-[450px] md:w-5/6 md:mx-auto'>
+         <section className='mt-8'>
             <img 
-               src={ PhotoThree } 
-               alt="man holding yellow paper note with question mark in his hand" 
-               className='h-full w-full object-cover rounded-2xl'
+               src={ QuizPhoto3 } 
+               alt="A quiz enthusiast taking a quiz" 
+               className='h-[500px] w-full object-cover'
             />
          </section>
 
          <Footer />
-      </div>
+      </main>
    )
 }
 
